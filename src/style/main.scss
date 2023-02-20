@@ -6,6 +6,7 @@
 @import './base/typography';
 
 @import './components/buttons';
+@import './components/blob_bg';
 
 @import './layout/footer';
 @import './layout/sections';
@@ -16,3 +17,7 @@
 @import './sections/projects';
 
 @import './vendor/css/font-awesome.min.css';
+
+.layer {
+  background-image: url('../css-images/layer.svg');
+}
