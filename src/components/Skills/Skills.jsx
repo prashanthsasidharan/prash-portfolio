@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Title from '../Title/Title';
 import PortfolioContext from '../../context/context';
+import ReactSvg from '../../images/react.svg';
 
 const Skills = () => {
   const { skills } = useContext(PortfolioContext);
@@ -27,7 +28,7 @@ const Skills = () => {
                             target="_blank"
                             aria-label={name}
                           >
-                            sdf
+                            <ReactSvg />
                           </a>
                         );
                       })}

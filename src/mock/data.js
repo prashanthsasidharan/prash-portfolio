@@ -59,18 +59,21 @@ export const projectsData = [
 export const skillsData = [
   {
     id: nanoid(),
-    svg: 'react',
+    name: 'skills/react.svg',
     url: '',
+    title: 'react',
   },
   {
     id: nanoid(),
     name: 'ember',
     url: '',
+    title: 'ember',
   },
   {
     id: nanoid(),
     name: 'linkedin',
     url: '',
+    title: 'ember',
   },
   {
     id: nanoid(),
