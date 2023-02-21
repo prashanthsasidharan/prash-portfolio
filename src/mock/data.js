@@ -59,7 +59,7 @@ export const projectsData = [
 export const skillsData = [
   {
     id: nanoid(),
-    name: 'react',
+    svg: 'react',
     url: '',
   },
   {

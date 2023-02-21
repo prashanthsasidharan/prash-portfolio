@@ -2,13 +2,12 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
-import HeroImg from '../Image/HeroImg';
 // import LayerSvg from '../../images/layer.svg';
 import PortfolioContext from '../../context/context';
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
-  const { img, title, name, subtitle, cta } = hero;
+  const { title, name, subtitle, cta } = hero;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -35,7 +34,6 @@ const Header = () => {
 
   return (
     <section id="hero" className="jumbotron">
-
       <div className="blob-bg">
         <div className="spacer flip layer" />
         <svg
@@ -54,7 +52,7 @@ const Header = () => {
               fill="#BB004B"
             />
           </g>
-          <g 
+          <g
             transform="translate(509.54377535978017 281.49390864595887)"
             style={{ visibility: 'hidden' }}
           >
