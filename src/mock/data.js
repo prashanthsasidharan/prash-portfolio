@@ -55,6 +55,30 @@ export const projectsData = [
   },
 ];
 
+// SKILLS DATA
+export const skillsData = [
+  {
+    id: nanoid(),
+    name: 'react',
+    url: '',
+  },
+  {
+    id: nanoid(),
+    name: 'ember',
+    url: '',
+  },
+  {
+    id: nanoid(),
+    name: 'linkedin',
+    url: '',
+  },
+  {
+    id: nanoid(),
+    name: 'github',
+    url: '',
+  },
+];
+
 // CONTACT DATA
 export const contactData = {
   cta: '',
