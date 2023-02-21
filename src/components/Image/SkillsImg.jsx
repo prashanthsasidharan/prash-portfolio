@@ -1,38 +1,41 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import Img from 'gatsby-image/withIEPolyfill';
 
-const SkillsImg = ({ filename }) => (
+const SkillsImg = ({ filename, alt }) => (
   <StaticQuery
     query={graphql`
       query {
-        images: allFile(filter: { extension: { in: "svg" } }) {
-          nodes {
-            publicURL
+        images: allFile {
+          edges {
+            node {
+              relativePath
+              name
+              childImageSharp {
+                fixed(width: 75, height: 75) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
         }
       }
     `}
     render={(data) => {
-      const publicUrl = data.images.nodes.find((n) => {
-        return n.publicURL.includes(filename);
-      });
+      const image = data.images.edges.find((n) => n.node.relativePath.includes(filename));
 
-      console.log(publicUrl);
+      if (!image) return null;
 
-      if (!publicUrl) return null;
-
-      // console.log(image);
-
-      // const imageFluid = image.node.childImageSharp.fluid;
-      return <Img src={publicUrl.publicUrl} alt="" />;
+      const imageFixed = image.node.childImageSharp.fixed;
+      return <Img alt={alt} fixed={imageFixed} objectFit="cover" objectPosition="50% 50%" />;
     }}
   />
 );
 
 SkillsImg.propTypes = {
   filename: PropTypes.string,
+  alt: PropTypes.string,
 };
 
 export default SkillsImg;

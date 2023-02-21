@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Title from '../Title/Title';
 import PortfolioContext from '../../context/context';
-import ReactSvg from '../../images/react.svg';
+import SkillsImg from '../Image/SkillsImg';
 
 const Skills = () => {
   const { skills } = useContext(PortfolioContext);
@@ -19,16 +19,17 @@ const Skills = () => {
                   <div className="logos">
                     {skills &&
                       skills.map((skill) => {
-                        const { id, name, url } = skill;
+                        const { id, img, url, title } = skill;
                         return (
                           <a
                             key={id}
                             href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
                             rel="noopener noreferrer"
                             target="_blank"
-                            aria-label={name}
+                            aria-label={img}
+                            className="d-inline-block"
                           >
-                            <ReactSvg />
+                            <SkillsImg alt={title} filename={img} />
                           </a>
                         );
                       })}

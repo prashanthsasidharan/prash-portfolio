@@ -59,26 +59,69 @@ export const projectsData = [
 export const skillsData = [
   {
     id: nanoid(),
-    name: 'skills/react.svg',
+    img: 'skills/html.png',
+    url: '',
+    title: 'html',
+  },
+  {
+    id: nanoid(),
+    img: 'skills/css.png',
+    url: '',
+    title: 'css',
+  },
+  {
+    id: nanoid(),
+    img: 'skills/javascript.png',
+    url: '',
+    title: 'javascript',
+  },
+  {
+    id: nanoid(),
+    img: 'skills/typescript1.png',
+    url: '',
+    title: 'typescript',
+  },
+  {
+    id: nanoid(),
+    img: 'skills/node-js.png',
+    url: '',
+    title: 'node-js',
+  },
+  {
+    id: nanoid(),
+    img: 'skills/ember.png',
+    url: '',
+    title: 'ember',
+  },
+  {
+    id: nanoid(),
+    img: 'skills/react.png',
     url: '',
     title: 'react',
   },
   {
     id: nanoid(),
-    name: 'ember',
+    img: 'skills/bootstrap.png',
     url: '',
-    title: 'ember',
+    title: 'bootstrap',
   },
   {
     id: nanoid(),
-    name: 'linkedin',
+    img: 'skills/gitlab.png',
     url: '',
-    title: 'ember',
+    title: 'gitlab',
   },
   {
     id: nanoid(),
-    name: 'github',
+    img: 'skills/github.png',
     url: '',
+    title: 'github',
+  },
+  {
+    id: nanoid(),
+    img: 'skills/webpack.png',
+    url: '',
+    title: 'webpack',
   },
 ];
 
