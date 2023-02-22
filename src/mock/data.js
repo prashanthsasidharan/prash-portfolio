@@ -28,30 +28,30 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
+    img: 'projects/form-filler.jpg',
+    title: 'Form Filler',
+    info: 'When you give your product to testers or other teams in your organisation, we also need to provide all the sandboxed credentials and they need to fill in all the details which makes the process repetitive and boring. This is where our filler comes to rescue. Once configuring filler with the form credentials, with just a button click the form can be autofilled.',
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: 'https://form-filler-backend.onrender.com/',
+    repo: 'https://github.com/prashanthsasidharan/form-filler', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
+    img: 'projects/ecommerce-app.jpg',
+    title: 'E-commerce app with stripe integration',
+    info: 'E-commerce app with the facility to make real-time payments via stripe integration',
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: 'https://ecommerce-stripe-app.onrender.com/',
+    repo: 'https://github.com/prashanthsasidharan/ecommerce-app-with-stripe', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
+    img: 'projects/select-web.jpg',
+    title: 'Single and Multi Select Web Component',
+    info: 'Compatible select web component which works with any framework or no framework. This component is created using stencilJs',
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: ' https://select-component.netlify.app/',
+    repo: 'https://github.com/prashanthsasidharan/select-web-component', // if no repo, the button will not show up
   },
 ];
 
