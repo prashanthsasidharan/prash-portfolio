@@ -1,0 +1,20 @@
+.pills {
+  margin-bottom: 0.5rem;
+}
+
+.pills a {
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .3s;
+  transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;
+  font-size: 1.3rem;
+  line-height: 1rem;
+  font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  padding: 0.80rem;
+  background-color: rgba(167,243,208,1);
+  border-radius: 0.25rem;
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  margin-right: 0.9rem;
+  text-decoration: inherit;
+  color: rgba(6,95,70,1) !important;
+}
