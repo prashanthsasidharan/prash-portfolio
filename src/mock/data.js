@@ -2,16 +2,52 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: '', // e.g: 'Name | Developer'
-  lang: '', // e.g: en, es, fr, jp
-  description: '', // e.g: Welcome to my website
+  title: 'Prash Portflio',
+  lang: 'en',
+  description: 'Prash Portfolio website',
+};
+
+// FOOTER DATA
+export const navbarData = {
+  links: [
+    {
+      id: nanoid(),
+      name: 'home',
+      url: 'hero',
+    },
+    {
+      id: nanoid(),
+      name: 'about',
+      url: 'about',
+    },
+    {
+      id: nanoid(),
+      name: 'projects',
+      url: 'projects',
+    },
+    {
+      id: nanoid(),
+      name: 'skills',
+      url: 'skills',
+    },
+    {
+      id: nanoid(),
+      name: 'blogs',
+      url: 'blogs',
+    },
+    {
+      id: nanoid(),
+      name: 'contact',
+      url: 'contact',
+    },
+  ],
 };
 
 // HERO DATA
 export const heroData = {
   title: '',
-  name: '',
-  subtitle: '',
+  name: 'Prashanth Sasidharan',
+  subtitle: 'Creative Front End Developer',
   cta: '',
 };
 
@@ -21,7 +57,7 @@ export const aboutData = {
   paragraphOne: '',
   paragraphTwo: '',
   paragraphThree: '',
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  resume: 'https://github.com/prashanthsasidharan', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
@@ -60,67 +96,67 @@ export const skillsData = [
   {
     id: nanoid(),
     img: 'skills/html.png',
-    url: '',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
     title: 'html',
   },
   {
     id: nanoid(),
     img: 'skills/css.png',
-    url: '',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
     title: 'css',
   },
   {
     id: nanoid(),
     img: 'skills/javascript.png',
-    url: '',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
     title: 'javascript',
   },
   {
     id: nanoid(),
     img: 'skills/typescript1.png',
-    url: '',
+    url: 'https://www.typescriptlang.org/',
     title: 'typescript',
   },
   {
     id: nanoid(),
     img: 'skills/node-js.png',
-    url: '',
+    url: 'https://nodejs.org/en/',
     title: 'node-js',
   },
   {
     id: nanoid(),
     img: 'skills/ember.png',
-    url: '',
+    url: 'https://emberjs.com/',
     title: 'ember',
   },
   {
     id: nanoid(),
     img: 'skills/react.png',
-    url: '',
+    url: 'https://reactjs.org/',
     title: 'react',
   },
   {
     id: nanoid(),
     img: 'skills/bootstrap.png',
-    url: '',
+    url: 'https://getbootstrap.com/',
     title: 'bootstrap',
   },
   {
     id: nanoid(),
     img: 'skills/gitlab.png',
-    url: '',
+    url: 'https://about.gitlab.com/',
     title: 'gitlab',
   },
   {
     id: nanoid(),
     img: 'skills/github.png',
-    url: '',
+    url: 'https://github.com/',
     title: 'github',
   },
   {
     id: nanoid(),
     img: 'skills/webpack.png',
-    url: '',
+    url: 'https://webpack.js.org/',
     title: 'webpack',
   },
 ];
@@ -224,7 +260,7 @@ export const blogsData = [
 export const contactData = {
   cta: '',
   btn: '',
-  email: '',
+  email: 'prashanthsasidharan321@gmail.com',
 };
 
 // FOOTER DATA
@@ -232,23 +268,23 @@ export const footerData = {
   networks: [
     {
       id: nanoid(),
-      name: 'twitter',
-      url: '',
-    },
-    {
-      id: nanoid(),
-      name: 'codepen',
-      url: '',
-    },
-    {
-      id: nanoid(),
       name: 'linkedin',
-      url: '',
+      url: 'https://www.linkedin.com/in/prashanth-sasidharan-7a32301a8/',
     },
     {
       id: nanoid(),
       name: 'github',
-      url: '',
+      url: 'https://github.com/prashanthsasidharan',
+    },
+    {
+      id: nanoid(),
+      name: 'jsfiddle',
+      url: 'https://dev.to/prashan81992916',
+    },
+    {
+      id: nanoid(),
+      name: 'twitter',
+      url: 'https://twitter.com/PrashanthSasid2',
     },
   ],
 };

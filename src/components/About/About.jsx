@@ -38,15 +38,23 @@ const About = () => {
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div className="about-wrapper__info">
                 <p className="about-wrapper__info-text">
-                  {paragraphOne ||
-                    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
+                  {paragraphOne || (
+                    <>
+                      Hi, I&apos;m Prashanth Sasidharan, a self-taught passionate FrontEnd developer
+                      from India, currently working at&nbsp;
+                      <a href="https://www.zohocorp.com/" target="_blank" rel="noreferrer">
+                        Zoho Corporation
+                      </a>
+                      &nbsp;as a FrontEnd Engineer.
+                    </>
+                  )}
                 </p>
                 <p className="about-wrapper__info-text">
                   {paragraphTwo ||
-                    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
+                    'I ❤️ to create blogs and open source projects. I have created 3 open source projects built primarily using react, bootstrap, stenciljs and typescript'}
                 </p>
-                <p className="about-wrapper__info-text">
-                  {paragraphThree || 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'}
+                <p className="about-wrapper__info-text text-secondary">
+                  {paragraphThree || '#Developer #GymNut #Investor'}
                 </p>
                 {resume && (
                   <span className="d-flex mt-3">

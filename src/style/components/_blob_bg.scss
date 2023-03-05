@@ -112,6 +112,26 @@
         background-position: center;
         background-size: cover;
       }
+      
+      @include respond(phone) {
+        .blob-bg .layer:nth-child(3) {
+          position: absolute;
+          bottom: 0;
+        }
+
+        .spacer {
+          aspect-ratio: 600/300;
+        }
+
+        .blob-motion {
+          height: 540!important;
+          left: 29%;
+          top: 30%;
+          height: 540px;
+          width: 540px;
+        }
+
+      }
 
 
       .flip {
@@ -124,6 +144,8 @@
         position: absolute;
         transform: translateY(-20%);
         z-index: 0;
+        // height: 900px;
+        // width: 300px;
       }
 
       .blob-bg {

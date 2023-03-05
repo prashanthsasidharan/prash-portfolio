@@ -26,7 +26,7 @@ const Footer = () => {
               return (
                 <a
                   key={id}
-                  href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
+                  href={url || 'https://github.com/prashanthsasidharan'}
                   rel="noopener noreferrer"
                   target="_blank"
                   aria-label={name}
@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
         <hr />
         <p className="footer__text">
-          © {new Date().getFullYear()} - Created with love using
+          © {new Date().getFullYear()} - Created with love using&nbsp;
           <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener noreferrer">
             Gatsby
           </a>

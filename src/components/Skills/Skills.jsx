@@ -1,11 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Title from '../Title/Title';
 import PortfolioContext from '../../context/context';
 import SkillsImg from '../Image/SkillsImg';
+import SkillsImgMobile from '../Image/SkillsImgMobile';
 
 const Skills = () => {
   const { skills } = useContext(PortfolioContext);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth > 1200) {
+      setIsDesktop(true);
+    } else {
+      setIsDesktop(false);
+    }
+  }, []);
 
   return (
     <section id="skills">
@@ -23,13 +33,17 @@ const Skills = () => {
                         return (
                           <a
                             key={id}
-                            href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
+                            href={url || 'https://github.com/prashanthsasidharan'}
                             rel="noopener noreferrer"
                             target="_blank"
                             aria-label={img}
                             className="d-inline-block"
                           >
-                            <SkillsImg alt={title} filename={img} />
+                            {isDesktop ? (
+                              <SkillsImg alt={title} filename={img} />
+                            ) : (
+                              <SkillsImgMobile alt={title} filename={img} />
+                            )}
                           </a>
                         );
                       })}

@@ -6,10 +6,12 @@ import Skills from './Skills/Skills';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import Blogs from './Blogs/Blogs';
+import Layout from './Layout/Layout';
 
 import { PortfolioProvider } from '../context/context';
 
 import {
+  navbarData,
   heroData,
   aboutData,
   projectsData,
@@ -20,6 +22,7 @@ import {
 } from '../mock/data';
 
 function App() {
+  const [navbar, setNavbarData] = useState({});
   const [hero, setHero] = useState({});
   const [about, setAbout] = useState({});
   const [projects, setProjects] = useState([]);
@@ -29,6 +32,7 @@ function App() {
   const [footer, setFooter] = useState({});
 
   useEffect(() => {
+    setNavbarData({ ...navbarData });
     setHero({ ...heroData });
     setAbout({ ...aboutData });
     setProjects([...projectsData]);
@@ -39,14 +43,16 @@ function App() {
   }, []);
 
   return (
-    <PortfolioProvider value={{ hero, about, projects, skills, blogs, contact, footer }}>
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Blogs />
-      <Contact />
-      <Footer />
+    <PortfolioProvider value={{ navbar, hero, about, projects, skills, blogs, contact, footer }}>
+      <Layout>
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Blogs />
+        <Contact />
+        <Footer />
+      </Layout>
     </PortfolioProvider>
   );
 }
