@@ -25,40 +25,122 @@
     padding: 0rem $default-font-size;
   }
 
-  .hero-title {
-    font-size: 5.6rem;
-    font-weight: 700;
-    margin-bottom: 3.2rem;
-    text-align: left;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1250px;
 
     @include respond(tab-land) {
-      font-size: 4rem;
+      flex-direction: column;
+      gap: 60px;
     }
-    @include respond(tab-port) {
-      font-size: 3.6rem;
-      text-align: center;
-    }
-    @include respond(phone) {
-      font-size: 3.5rem;
-      line-height: 1.5;
-    }
-    @include respond(phone-xs) {
-      font-size: 2.8rem;
-    }
-  }
 
-  .hero-cta {
-    display: flex;
-
-    @include respond(tab-port) {
+    .hero-details {
+      display: flex;
+      flex-direction: column;
       justify-content: center;
+
+      .hero-title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $white-color;
+        text-align: left;
+
+        h4 {
+          font-size: 2rem;
+        }
+
+        h1 {
+          font-size : 4.5rem;
+          font-weight: 700;
+          @include respond(tab-port) {
+            font-size: 3.5rem;
+          }
+        }
+    
+        @include respond(tab-land) {
+          font-size: 2.5rem;
+        }
+        @include respond(tab-port) {
+          font-size: 2.3rem;
+          text-align: center;
+        }
+        @include respond(phone) {
+          font-size: 2.2rem;
+          line-height: 1.5;
+        }
+        @include respond(phone-xs) {
+          font-size: 1.8rem;
+        }
+      }
+    
+      .hero-cta {
+        display: flex;
+        gap: 10px;
+    
+        @include respond(tab-port) {
+          justify-content: center;
+        }
+    
+        & a {
+          font-size: 2.4rem;
+    
+          @include respond(phone) {
+            font-size: 2rem;
+          }
+        }
+      }
+      
+      .hero-social-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap: 25px;
+        margin-left: -10px;
+        
+        @include respond(tab-port) {
+          justify-content: center;
+          margin-left: 0px;
+        }
+      
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          color: $white-color;
+          font-size: 3rem;
+          width: 5rem;
+          height: 5rem;
+          margin: 1.2rem 0rem;
+          transition: all 0.2s ease-in;
+      
+          &:hover {
+            transform: translateY(-2px);
+          }
+        }
+      }
     }
 
-    & a {
-      font-size: 2.4rem;
+    .code-card {
+      padding: 30px 35px;
+      border-radius: 10px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+      background-color: #0F1221;
+      text-align: left;
 
-      @include respond(phone) {
-        font-size: 2rem;
+      @include respond(tab-land) {
+        padding: 20px 25px;
+      }
+      
+      pre {
+        font-size: 1.5rem;
+        color: $white-color;
+
+
+        @include respond(tab-land) {
+          font-size: 1rem;
+          overflow: scroll;
+        }
       }
     }
   }

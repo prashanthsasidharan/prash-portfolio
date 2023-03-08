@@ -25,7 +25,7 @@
 .cta-btn--hero {
   background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: $white-color;
   border-width: 2px;
   border-style: solid;
   border-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
@@ -35,15 +35,13 @@
   @include respond(phone) {
     background-image: none;
     border: 2px solid $secondary-color;
-    -webkit-text-fill-color: $secondary-color;
+    -webkit-text-fill-color: $white-color;
   }
 
   &::after {
     background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    width: 100%;
     // Responsive Button hero style
-    @include respond(phone) {
-      background-image: none;
-    }
   }
 
   &:hover {

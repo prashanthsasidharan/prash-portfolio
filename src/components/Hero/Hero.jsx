@@ -6,8 +6,9 @@ import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 
 const Header = () => {
-  const { hero } = useContext(PortfolioContext);
-  const { title, name, subtitle, cta } = hero;
+  const { hero, footer } = useContext(PortfolioContext);
+  const { title, name, subtitle, cta, resume } = hero;
+  const { networks } = footer;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -67,21 +68,75 @@ const Header = () => {
       </div>
 
       <Container>
-        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
-          <h1 className="hero-title">
-            {title || `👋Hello, I'm `} <span className="text-color-main">{name || 'Name'}</span>
-            <br />
-            {subtitle || "I'm the Unknown Developer."}
-          </h1>
-        </Fade>
-        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
-          <p className="hero-cta">
-            <span className="cta-btn cta-btn--hero">
-              <Link to="about" smooth duration={1000}>
-                {cta || 'Know more'}
-              </Link>
-            </span>
-          </p>
+        <div className="hero-details">
+          <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+            <div className="hero-title">
+              <h4>{title || `Hello, I'm `} </h4>
+              <h1>
+                {name || 'Name'}
+              </h1>
+              <h2> {subtitle || "I'm the Unknown Developer."}</h2>
+            </div>
+          </Fade>
+          <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+            <div className="hero-social-links">
+              {networks &&
+                networks.map((network) => {
+                  const { id, name, url } = network;
+                  return (
+                    <a
+                      key={id}
+                      href={url || 'https://github.com/prashanthsasidharan'}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      aria-label={name}
+                    >
+                      <i className={`fa fa-${name || 'refresh'} fa-inverse`} />
+                    </a>
+                  );
+                })}
+            </div>
+          </Fade>
+          <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
+            <p className="hero-cta">
+              <span className="cta-btn cta-btn--hero">
+                <Link to="about" smooth duration={1000}>
+                  {cta || 'Know more'}
+                </Link>
+              </span>
+
+              {resume && (
+                <span className="cta-btn cta-btn--hero">
+                  {/* <Link to={resume} smooth duration={1000}>
+                    Resume
+                  </Link> */}
+                  <a target="_blank" rel="noopener noreferrer" href={resume}>
+                    Resume
+                  </a>
+                </span>
+              )}
+            </p>
+          </Fade>
+        </div>
+        <Fade right={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+          <div className="code-card">
+            <pre>
+              1&nbsp;&nbsp;class <b>Person</b> {'{'}
+            </pre>
+            <pre>2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; constructor() {'{'}</pre>
+            <pre>
+              3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.name = <b>Prashanth Sasidharan</b>;
+            </pre>
+            <pre>
+              4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.traits = <b>["DEV", "FITNESS"];</b>
+            </pre>
+            <pre>
+              5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.age ={' '}
+              <b>{new Date().getFullYear() - 1998}</b>
+            </pre>
+            <pre>6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {'}'}</pre>
+            <pre>7&nbsp;&nbsp;{'}'}</pre>
+          </div>
         </Fade>
       </Container>
     </section>

@@ -46,9 +46,10 @@ export const navbarData = {
 // HERO DATA
 export const heroData = {
   title: '',
-  name: 'Prashanth Sasidharan',
-  subtitle: 'Creative Front End Developer',
+  name: 'PRASHANTH SASIDHARAN',
+  subtitle: 'CREATIVE FRONT-END WEB DEVELOPER',
   cta: '',
+  resume: 'https://prash-resume.netlify.app/resume.pdf', // if no resume, the button will not show up
 };
 
 // ABOUT DATA
