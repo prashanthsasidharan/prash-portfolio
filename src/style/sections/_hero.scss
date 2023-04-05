@@ -23,6 +23,7 @@
 
   @include respond(phone) {
     padding: 0rem $default-font-size;
+    height: 100dvh;
   }
 
   .container {

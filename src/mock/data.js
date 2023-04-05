@@ -49,7 +49,7 @@ export const heroData = {
   name: 'PRASHANTH SASIDHARAN',
   subtitle: 'CREATIVE FRONT-END WEB DEVELOPER',
   cta: '',
-  resume: 'https://prash-resume.netlify.app/resume.pdf', // if no resume, the button will not show up
+  resume: 'https://github.com/prashanthsasidharan', // if no resume, the button will not show up
 };
 
 // ABOUT DATA
@@ -58,7 +58,7 @@ export const aboutData = {
   paragraphOne: '',
   paragraphTwo: '',
   paragraphThree: '',
-  resume: 'https://prash-resume.netlify.app/resume.pdf', // if no resume, the button will not show up
+  resume: 'https://github.com/prashanthsasidharan', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
